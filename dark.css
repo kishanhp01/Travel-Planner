@@ -1,0 +1,24 @@
+body.dark {
+  --bg: #07111f;
+  --card: rgba(17, 28, 47, 0.94);
+  --text: #eef2ff;
+  --muted: #b9c2d8;
+  --primary: #7bc7ff;
+  --accent: #37d39d;
+  --border: rgba(123, 199, 255, 0.16);
+}
+
+body.dark {
+  background:
+    radial-gradient(circle at top left, rgba(123, 199, 255, 0.18), transparent 24%),
+    linear-gradient(135deg, #020817 0%, #07111f 100%);
+}
+
+body.dark .btn.secondary {
+  background: #1f2d44;
+  color: #7bc7ff;
+}
+
+body.dark .list-item {
+  background: rgba(255, 255, 255, 0.04);
+}
