@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Trip | Travel Planner Pro</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <nav class="top-nav app-nav">
+      <a class="brand" href="dashboard.html">Travel Planner Pro</a>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-trip.html">Create trip</a>
+        <a href="history.html">History</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+      </div>
+    </nav>
+
+    <main class="form-shell">
+      <form id="trip-form" class="card form-card">
+        <h1>Create a new trip</h1>
+        <p>Plan the essentials and build your personalized packing list.</p>
+
+        <label>
+          Trip name
+          <input type="text" id="trip-name" required />
+        </label>
+        <label>
+          Destination
+          <input type="text" id="trip-destination" required />
+        </label>
+        <label>
+          Start date
+          <input type="date" id="trip-start" required />
+        </label>
+        <label>
+          End date
+          <input type="date" id="trip-end" required />
+        </label>
+        <label>
+          Travelers
+          <input type="number" id="trip-travelers" min="1" value="1" />
+        </label>
+        <label>
+          Budget
+          <input type="number" id="trip-budget" min="0" value="1000" />
+        </label>
+        <label>
+          Notes
+          <textarea id="trip-notes" rows="4"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Save trip</button>
+          <button class="btn secondary" type="reset">Reset</button>
+        </div>
+      </form>
+
+      <section class="card side-card">
+        <h2>Trip toolkit</h2>
+        <div id="packing-list"></div>
+        <div id="budget-summary"></div>
+        <div id="map-preview"></div>
+      </section>
+    </main>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/budget.js"></script>
+    <script src="js/packing.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/notifications.js"></script>
+  </body>
+</html>
