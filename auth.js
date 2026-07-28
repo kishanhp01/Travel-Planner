@@ -38,8 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const user = getStoredUser();
-  if (user && window.location.pathname.includes("login.html") || window.location.pathname.includes("signup.html")) {
+  // safe stored user access & fixed redirect logic
+  function getStoredUserSafe() {
+    try {
+      return (typeof getStoredUser === 'function') ? getStoredUser() : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  const user = getStoredUserSafe();
+  if (user && (window.location.pathname.includes("login.html") || window.location.pathname.includes("signup.html"))) {
     window.location.href = "dashboard.html";
   }
 });
