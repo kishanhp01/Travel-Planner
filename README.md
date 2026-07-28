@@ -27,12 +27,4 @@ A polished travel-planning web app with animated UI, travel dashboard features, 
 - js/: frontend logic and interactions
 - assets/images/: visual assets
 
-## Run locally
-```bash
-cd travel-planner-pro
-python3 -m http.server 8000
-```
-Then open http://localhost:8000 in your browser.
 
-## GitHub repository ready
-This folder is prepared to be pushed to a GitHub repository as-is.
