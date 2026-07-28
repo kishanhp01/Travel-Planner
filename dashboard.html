@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Travel Planner Pro</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/dark.css" />
+  </head>
+  <body>
+    <nav class="top-nav app-nav">
+      <a class="brand" href="dashboard.html">Travel Planner Pro</a>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-trip.html">Create trip</a>
+        <a href="history.html">History</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="index.html" id="logout-link">Logout</a>
+      </div>
+    </nav>
+
+    <main class="dashboard-shell">
+      <section class="hero-card dashboard-hero">
+        <div>
+          <p class="eyebrow">Your travel control center</p>
+          <h1 id="welcome-name">Welcome back!</h1>
+          <p>Keep your plans, budget, and packing in sync before departure.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="create-trip.html">Create a trip</a>
+          <a class="btn secondary" href="history.html">View history</a>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="card stat-card">
+          <h3>Upcoming trips</h3>
+          <p id="upcoming-count">0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Total budget</h3>
+          <p id="total-budget">$0</p>
+        </article>
+        <article class="card stat-card">
+          <h3>Weather alerts</h3>
+          <p id="weather-alerts">0 active</p>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="card">
+          <h2>Upcoming itineraries</h2>
+          <ul id="trip-list" class="list"></ul>
+        </article>
+        <article class="card">
+          <h2>Weather snapshot</h2>
+          <div id="weather-card"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/notifications.js"></script>
+  </body>
+</html>
